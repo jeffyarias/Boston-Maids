@@ -1,0 +1,99 @@
+<svg
+  width="300"
+  height="200"
+  viewBox="0 0 300 200"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-labelledby="title"
+  role="img"
+>
+  <title id="title">Boston Maids - Logo</title>
+
+  <!-- 
+    1) GRADIENT BACKGROUND WITH ROUNDED CORNERS
+       You can adjust rx/ry (currently set to 20) 
+       for more or less rounding.
+  -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4FC3F7" />
+      <stop offset="100%" stop-color="#81D4FA" />
+    </linearGradient>
+  </defs>
+  <rect
+    x="0"
+    y="0"
+    width="300"
+    height="200"
+    fill="url(#bgGradient)"
+    rx="20"
+    ry="20"
+  />
+
+  <!-- 
+    2) MONOGRAM “B” & “M”
+       - Overlapping letters in center
+  -->
+  <g transform="translate(150, 100)"> 
+    <!-- Big B -->
+    <text
+      x="-20"
+      y="40"
+      font-size="80"
+      font-weight="bold"
+      fill="#FFFFFF"
+      font-family="Arial, sans-serif"
+      text-anchor="middle"
+    >
+      B
+    </text>
+
+    <!-- Overlapping M -->
+    <text
+      x="20"
+      y="40"
+      font-size="80"
+      font-weight="bold"
+      fill="#FFD54F"
+      font-family="Arial, sans-serif"
+      text-anchor="middle"
+    >
+      M
+    </text>
+  </g>
+
+  <!-- 
+    3) SMALL BROOM ICON 
+       - top-right corner
+  -->
+  <g transform="translate(240, 30)">
+    <!-- Handle -->
+    <rect
+      x="0" 
+      y="0" 
+      width="4" 
+      height="20" 
+      fill="#6D4C41" 
+      rx="1"
+    />
+    <!-- Bristles -->
+    <path
+      d="M -2 20 L 6 20 L 8 26 L -4 26 Z"
+      fill="#FFD54F"
+    />
+  </g>
+
+  <!-- 
+    4) BUSINESS NAME (under the monogram)
+  -->
+  <text
+    x="150"
+    y="160"
+    font-size="20"
+    fill="#FFFFFF"
+    font-family="Arial, sans-serif"
+    font-weight="bold"
+    text-anchor="middle"
+  >
+    BOSTON MAIDS
+  </text>
+</svg>
