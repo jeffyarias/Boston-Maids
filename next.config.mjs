@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-export default nextConfig;
+const nextConfig = {
+    output: 'standalone', // Correct way to configure standalone output
+    //reactStrictMode: true, // Optional, but useful in development
+  };
+  
+  export default nextConfig;
