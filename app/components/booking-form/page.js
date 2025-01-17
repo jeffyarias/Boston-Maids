@@ -1,7 +1,7 @@
 'use client';
 
 import styles from './booking.module.css';
-import Sticky from '../Sticky/Sticky';
+//import Sticky from '../Sticky/Sticky';
 import Extras from '../Extras/Extras';
 
 
@@ -159,17 +159,9 @@ const BookingForm = () => {
 
           <div className={styles.section}>
             <span>4</span>Extras
+            <Extras />
           </div>
-          <div className={styles.innerwrap}>
-            <Extras
-              //onclick={this.changeExtras}
-              // classFridge={fridgeClass}
-              // classOven={ovenClass}
-              // classMove={moveClass}
-              // classWall={wallClass}
-            />
-          </div>
-
+          
           <div className={styles.section}>
             <span>5</span>Date & Time
           </div>

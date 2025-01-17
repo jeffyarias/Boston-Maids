@@ -66,4 +66,20 @@ font-size: 70%;
 border-radius: 0;
 
     }
+
+    .imageWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background-color: lightblue; /* or your desired background color */
+        overflow: hidden; /* Ensures the image fits within the circle */
+      }
+      
+      .customImage {
+        object-fit: cover; /* Ensures the image covers the container without distortion */
+      }
+      
 }

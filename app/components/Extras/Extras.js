@@ -4,10 +4,11 @@ import fridge from './images/kitchen.png';
 import oven from './images/gas-stove.png';
 import truck from './images/moving-truck.png';
 import wiping from './images/wiping.png'
+import Image from 'next/image';
 
 
 
-const extras = (props)=> {
+const Extras = (props)=> {
   
   const fridgeClass = [];
   if (props.classFridge === "active") {
@@ -71,21 +72,29 @@ const extras = (props)=> {
         
         <div className={extra.extrasIcons}>
        <div  onClick={fridgeFunc} className={fridgeClass.join(' ')}>
-        <img src={fridge} />
+        <Image src={fridge} alt='Fridge'  width={50}
+        height={50}
+        className={extra.img} />
         <p  className={extra.title}>Inside the fridge</p>
     
        </div>
        <div onClick={ovenFunc} className={ovenClass.join(' ')}>
-           <img src={oven}/>
+           <Image src={oven} alt="Oven"  width={50}
+        height={50}
+        className={extra.img}/>
            <p className={extra.title}>Inside the Oven</p>
        </div>
        <div onClick={moveFunc} className={moveClass.join(' ')}>
-           <img src={truck }/>
+           <Image src={truck} alt='Truck'  width={50}
+        height={50}
+        className={extra.img}/>
            <p className={extra.title}>Move in/out</p>
            </div>
 
            <div onClick={wallFunc} className={wallClass.join(' ')}>
-           <img src={wiping }/>
+           <Image src={wiping } alt='Wiping' width={50}
+        height={50}
+        className={extra.img}/>
            <p className={extra.title}>Wall Washing</p>
        </div>
         </div>
@@ -98,4 +107,4 @@ const extras = (props)=> {
 
 }
 
-export default extras;
+export default Extras;

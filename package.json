@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start -p $PORT",
+    "lint": "next lint",
+   "_comment": "postbuild: cp -R .next/static ./public"
+
   },
   "dependencies": {
     "next": "^15.1.4",
@@ -16,8 +18,7 @@
   "devDependencies": {
     "eslint": "^8",
     "eslint-config-next": "14.2.13"
-  },
-  "engines": {
-  "node": "20.x"
-}
+  }
+  
+
 }

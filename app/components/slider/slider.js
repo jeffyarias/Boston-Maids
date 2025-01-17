@@ -2,10 +2,13 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./slider.module.css";
+// Replace these imports with your own images
+import photo1 from "./images/01.jpg";
+import photo2 from "./images/02.jpg";
+import photo3 from "./images/03.jpg";
 
 const Slider = () => {
-  // Use public folder paths for images
-  const slides = ["/Images/01.jpg", "/Images/02.jpg", "/Images/03.jpg"];
+  const slides = [photo1, photo2, photo3];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const auto = true; // Toggle for auto-scroll
@@ -34,10 +37,12 @@ const Slider = () => {
           <Image
             src={slide}
             alt={`Slide ${index + 1}`}
-            layout="fill" // Fill the container
-            objectFit="cover" // Crop to fit
-            objectPosition="top" // Focus on the top portion
-            priority={index === 0}
+            fill // New syntax replaces `layout="fill"`
+            style={{
+              objectFit: "cover", // New syntax replaces `objectFit`
+              objectPosition: "top", // New syntax replaces `objectPosition`
+            }}
+            priority={index === 0} // Keeps the first image prioritized
           />
         </div>
       ))}
