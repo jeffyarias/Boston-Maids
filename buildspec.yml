@@ -10,5 +10,3 @@ artifacts:
   files:
     - '**/*'
   base-directory: .next
-  
-//Checking Codebuild
