@@ -5,7 +5,6 @@ import styles from './booking.module.css';
 import Extras from '../Extras/Extras';
 
 
-
 const BookingForm = () => {
  return (
     <div className={styles.container}>
