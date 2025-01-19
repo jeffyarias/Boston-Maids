@@ -4,7 +4,6 @@ const bookingPage = () => {
  return (
   <BookingForm />
 
-
  )
 
 }
