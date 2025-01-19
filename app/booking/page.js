@@ -8,4 +8,5 @@ const bookingPage = () => {
 
 }
 
+
 export default bookingPage;
