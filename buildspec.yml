@@ -28,4 +28,3 @@ artifacts:
   files:
     - app.zip
   discard-paths: no # Maintain the file structure
-
