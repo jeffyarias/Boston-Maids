@@ -3,28 +3,28 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 22 # Ensure the Node.js version matches your requirements
+      nodejs: 22
     commands:
       - echo "Installing dependencies..."
-      - npm ci # Install dependencies at the root or adjust to the correct directory
+      - npm ci # Clean install dependencies
 
   build:
     commands:
       - echo "Building the application..."
-      - npm run build # Adjust this command if it needs to run in a specific directory
+      - npm run build # Build the Next.js application
       - echo "Build completed successfully."
-      - echo "Checking the .next directory:"
-      - ls -al .next || echo ".next directory not found!"
+      - echo "Checking the directory structure after the build:"
+      - ls -R # List all files recursively for debugging
 
   post_build:
     commands:
       - echo "Packaging the application for deployment..."
-      - zip -r app.zip .next package.json package-lock.json public next.config.mjs
+      # Package files from both the app directory and the root production files
+      - zip -r app.zip .next app package.json package-lock.json public next.config.mjs
       - echo "Contents of app.zip:"
-      - unzip -l app.zip
+      - unzip -l app.zip # List the contents of the zip file
       - echo "Build and packaging completed."
 
 artifacts:
   files:
     - app.zip
-  discard-paths: no # Maintain the file structure
