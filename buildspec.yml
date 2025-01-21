@@ -18,7 +18,7 @@ artifacts:
   files:
     - '**/*'
   base-directory "build"
-
+  
 cache:
   paths:
    - 'node_modules/**/*'
