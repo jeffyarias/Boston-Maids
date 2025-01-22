@@ -3,6 +3,8 @@ import styles from "../booking-form/booking.module.css"
 
 const sticky =(props)=> {
 
+
+  
 return(
     <div className={styles.sticky} >
   <p>Date {props.date}</p>
