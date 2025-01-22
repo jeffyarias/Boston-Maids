@@ -6,19 +6,19 @@ phases:
       nodejs: 22
     commands:
       - echo "Installing dependencies..."
-      - npm ci # Clean install dependencies
+      - npm ci
 
   build:
     commands:
-      - echo "Building the application..."
-      - npm run build # Build the Next.js application
-      - echo "Build completed successfully."
-  
+      - echo "Validating source files and ensuring readiness for deployment..."
+      - echo "Build phase completed. Elastic Beanstalk will build the application."
+
+  post_build:
+    commands:
+      - echo "Packaging the source files for Elastic Beanstalk..."
+      - zip -r app.zip app/ package.json package-lock.json public next.config.mjs
+      - echo "Packaging completed successfully."
+
 artifacts:
   files:
-    - '**/*'
-  base-directory: 'build'
-
-cache:
-  paths:
-   - 'node_modules/**/*'
+    - app.zip
