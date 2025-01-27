@@ -3,14 +3,21 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 22
+      nodejs: 18
     commands:
       - npm install
   build:
     commands:
       - npm run build
+      - echo "Checking if the .next folder exists..."
+      - ls -la .next || echo ".next folder not found!"
+      - echo "Checking if the public folder exists..."
+      - ls -la public || echo "public folder not found!"
+      - echo "Copying files to artifact directory..."
       - mkdir -p artifact
-      - cp -R .next public package.json package-lock.json artifact/
+      - cp -R .next public package.json package-lock.json artifact/ || echo "Failed to copy files!"
+      - echo "Verifying artifact directory contents..."
+      - ls -la artifact || echo "artifact directory is empty!"
 artifacts:
   files:
     - artifact/**/*
