@@ -1,12 +1,12 @@
 .sticky {
     display: flex;
-      color: rgb(160, 55, 55);
+      color: rgb(61, 7, 239);
      
       position: -webkit-sticky;
       position: sticky;
       top: 0;
       z-index: 5000;
-      background-color: #257C9E;
+      background-color: #270ee5;
       justify-content: space-around;
       width: 100%;
     

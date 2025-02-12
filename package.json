@@ -7,18 +7,25 @@
     "build": "next build",
     "start": "next start -p $PORT",
     "lint": "next lint",
-   "_comment": "postbuild: cp -R .next/static ./public"
-
+    "_comment": "postbuild: cp -R .next/static ./public"
   },
   "dependencies": {
-    "next": "^15.1.4",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "axios": "^1.7.9",
+    "better-sqlite3": "^11.8.1",
+    "date-fns": "^4.1.0",
+    "next": "^15.1.7",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-datepicker": "^8.0.0",
+    "react-dom": "^19.0.0",
+    "react-time-picker": "^7.0.0",
+    "sonner": "^1.7.4"
   },
   "devDependencies": {
     "eslint": "^8",
     "eslint-config-next": "14.2.13"
   }
-  
-
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "../booking-form/booking.module.css"
 
-const sticky =(props)=> {
+const Sticky =(props)=> {
 
 
   
@@ -16,4 +16,4 @@ return(
 
 }
 
-export default sticky;
+export default Sticky;

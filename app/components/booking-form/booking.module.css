@@ -7,7 +7,7 @@
 
 .formstyle10 h1 {
 
-    background:blue;
+    background:rgb(150, 150, 158);
     padding: 20px 30px 15px 30px;
     margin: -30px -30px 30px -30px;
     border-radius: 10px 10px 0 0;
@@ -27,7 +27,7 @@
     display: block;
     margin-top: 2px;
     font: 13px Arial, Helvetica, sans-serif;
-    color:gray;
+    color:rgb(13, 13, 13);
 }
 
 .formstyle10 label {
@@ -67,12 +67,12 @@
 
 .formstyle10 .section {
     font: normal 20px 'Bitter', serif;
-    color: #2A88AD;
+    color: #798184;
     margin-bottom: 5px;
 }
 
 .formstyle10 .section span {
-    background: #2A88AD;
+    background: #7f8283;
     padding: 5px 10px 5px 10px;
     position: absolute;
     border-radius: 50%;
@@ -190,7 +190,7 @@
     background-color: #ffffff;
     border-radius: 2px;
 
-    border: 2px #000;
+    border: 2px #e61010;
     width: 35%;
     height: 60%;
     padding: 5px;
