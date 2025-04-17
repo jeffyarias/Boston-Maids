@@ -1,0 +1,116 @@
+/* Main Container */
+.homeContent {
+    padding: 4rem 2rem;
+  }
+  
+  /* Hero Section */
+  .heroSection {
+    text-align: center;
+    padding: 4rem 0;
+    background-color: #ebf8ff;
+  }
+  
+  .heroSection h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2d3748;
+  }
+  
+  .heroSection p {
+    font-size: 1.25rem;
+    color: #4a5568;
+  }
+  
+  .ctaButton {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    background-color: #3182ce;
+    color: white;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    transition: background 0.3s;
+  }
+  
+  .ctaButton:hover {
+    background-color: #2b6cb0;
+  }
+  
+  /* Services Section */
+  .servicesSection {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: white;
+  }
+  
+  .servicesSection h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2d3748;
+  }
+  
+  .servicesSection p {
+    font-size: 1.2rem;
+    color: #4a5568;
+  }
+  
+  .servicesSection ul {
+    margin-top: 1rem;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .servicesSection li {
+    font-size: 1.1rem;
+    color: #2d3748;
+    margin: 0.5rem 0;
+  }
+  
+  /* Booking Section */
+  .bookingSection {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: #f7fafc;
+  }
+  
+  .bookingSection h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2d3748;
+  }
+  
+  .bookingSection p {
+    font-size: 1.2rem;
+    color: #4a5568;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .heroSection h1 {
+      font-size: 2.5rem;
+    }
+  
+    .servicesSection h2,
+    .bookingSection h2 {
+      font-size: 2rem;
+    }
+  
+    .ctaButton {
+      padding: 0.75rem 1.5rem;
+    }
+  }
+
+  /* Ensure slider takes full viewport height */
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden;
+}
+
+/* Prevent content from showing above the fold */
+#content {
+  margin-top: 100vh; /* Push content below the slider */
+}
+
+  

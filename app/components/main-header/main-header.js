@@ -22,13 +22,13 @@ export default function MainHeader() {
         <nav className={classes.nav}>
        <ul>
       <li>
-      <NavLink href="/booking" className="">Booking</NavLink>
+      <NavLink href="/bookings" className="">Booking</NavLink>
       </li>
       <li>
         <NavLink href="/services">
           Services Offer</NavLink>
       </li>
-
+       
        </ul>
 
 

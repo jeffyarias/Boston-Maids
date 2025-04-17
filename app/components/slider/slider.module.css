@@ -20,4 +20,34 @@
   .current {
     opacity: 1;
   }
+  /* Arrow Container (Position Below Slider) */
+.arrowContainer {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Blinking Arrow Animation */
+.blinkingArrow {
+  width: 40px;
+  height: 40px;
+  color: black;
+  animation: blink 1.2s infinite alternate;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+}
+
   

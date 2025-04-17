@@ -106,6 +106,7 @@ const Booking = () => {
               <label htmlFor="name">Your Full Name</label>
               <input
                 id="name"
+                type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleInputChange}
@@ -117,6 +118,7 @@ const Booking = () => {
                 name="address"
                 value={formData.address}
                 onChange={handleInputChange}
+               
               ></textarea>
             </div>
 
@@ -170,6 +172,8 @@ const Booking = () => {
                 timeFormat="h:mm aa" // ✅ 12-hour format with AM/PM
                 timeIntervals={15} // ✅ Allows 15-minute intervals
                 placeholderText="Choose a date and time"
+              
+                
               />
             </div>
 

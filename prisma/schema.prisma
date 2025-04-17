@@ -1,0 +1,65 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Availability {
+  id           Int          @id @default(autoincrement())
+  room         Room         @relation(fields: [roomId], references: [id])
+  roomId       Int
+  cleaningType CleaningType @relation(fields: [cleaningId], references: [id])
+  cleaningId   Int
+  date         String
+  slots        Int
+  bookings     Booking[] // No relation attribute here!
+}
+
+model Booking {
+  id             Int           @id @default(autoincrement())
+  name           String
+  address        String
+  email          String
+  phone          String
+  room           Room          @relation(fields: [roomId], references: [id])
+  roomId         Int
+  cleaningType   CleaningType  @relation(fields: [cleaningId], references: [id])
+  cleaningId     Int
+  date           String
+  totalPrice     Int
+  availability   Availability? @relation(fields: [availabilityId], references: [id])
+  availabilityId Int?
+
+  // New Fields
+  cleaner        Cleaner?      @relation(fields: [cleanerId], references: [id])
+  cleanerId      Int?
+  status         String        @default("pending") // 'pending', 'confirmed', 'completed'
+  notes          String?
+  confirmationCode String?
+}
+
+model CleaningType {
+  id             Int            @id @default(autoincrement())
+  name           String
+  multiplier     Float
+  availabilities Availability[]
+  bookings       Booking[]
+}
+
+model Room {
+  id             Int            @id @default(autoincrement())
+  name           String
+  basePrice      Int
+  availabilities Availability[]
+  bookings       Booking[]
+}
+
+model Cleaner {
+  id         Int       @id @default(autoincrement())
+  name       String
+  phone      String
+  bookings   Booking[]
+}
